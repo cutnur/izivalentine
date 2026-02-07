@@ -1,0 +1,292 @@
+body {
+    font-family: 'Karla', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+}
+
+/* Header */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    align-items: center;
+    font-size: 12px;
+}
+
+.url-bar-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.url-bar {
+    border: 1px solid #E0115F;
+    padding: 5px 0;
+    border-radius: 20px;
+    color: #E0115F;
+    width: 100%;
+    max-width: 600px; /* Panjang disesuaikan agar manis */
+}
+
+.nav-left, .nav-right {
+    font-size: 11px;
+    white-space: nowrap;
+    color: #E0115F; /* Ganti kode hex ini dengan warna yang kamu mau */
+}
+
+/* --- HERO & CALENDAR --- */
+.hero {
+    margin: 120px 0 80px 0; /* Memberi ruang lebih untuk kalender besar */
+    text-align: center;
+}
+
+.hero-content {
+    display: inline-block;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 3.5rem; /* Ukuran teks disesuaikan agar proporsional */
+    font-weight: 800;
+    letter-spacing: 5px;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- GRID: DIKECILKAN AGAR TIDAK GEDE BANGET --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 800px; /* UKURAN ROW DIKECILKAN agar pas di mata */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.full-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+/* --- FOOTER: @2026 TENGAH & NAIK --- */
+.main-footer {
+    margin-top: 80px; /* Jarak dari grid ke footer */
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.year {
+    font-size: 1rem;
+    color: #666;
+    margin: 0 auto 40px auto; 
+    display: block;
+}
+
+.full-line {
+    width: 100vw;
+    height: 1px;
+    background-color: #E0115F;
+    margin: 15px 0; /* Jarak garis */
+}
+
+.footer-credits {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.8;
+}
+
+.footer-credits p {
+    margin: 0;
+}
+
+/* --- RESPONSIVE UNTUK HP --- */
+@media (max-width: 768px) {
+    /* 1. Mengatur ulang jarak section hero ke header */
+    .hero {
+        margin: 20px 0 30px 0; /* Angka 20px ini yang bikin teks naik ke atas */
+        height: auto; /* Memastikan height tidak mengunci jarak */
+    }
+
+    /* 2. Mengatur ukuran teks agar tidak terlalu memakan ruang */
+    .hero-title, .happy-val {
+        font-size: 2rem; /* Ukuran teks lebih kecil buat HP */
+        line-height: 1.2;
+        letter-spacing: 2px;
+    }
+
+    /* 3. Menyesuaikan grid agar tetap rapi */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    /* 4. Menyesuaikan header di mobile */
+    .nav-container {
+        gap: 10px;
+        flex-direction: column; /* Teks samping dan bar jadi tumpuk jika layar sangat sempit */
+        padding: 10px 0;
+    }
+}
+
+
+/* --- PAGE VALENTINE KHUSUS --- */
+.valentine-page {
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+    /* Background belah dua: Putih (Kiri) & Pink (Kanan) */
+    background: linear-gradient(to right, #ffffff 50%, #ffebee 50%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.split-layout {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Bagian Kiri (Area Putih) */
+.left-section {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* MEMBUAT HP DI TENGAH HORIZONTAL */
+    align-items: center;     /* MEMBUAT HP DI TENGAH VERTIKAL */
+    background-color: white; /* Memastikan sisi kiri benar-benar putih */
+}
+
+.phone-container {
+    width: 85%;              /* Mengambil ruang lebih banyak di area putih */
+    max-width: 450px;        /* UKURAN HP DIPERBESAR (sebelumnya mungkin terlalu kecil) */
+    display: flex;
+    justify-content: center;
+}
+
+.phone-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Memberi sedikit bayangan lembut agar tidak flat */
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.08));
+}
+
+/* Bagian Kanan (Area Pink) */
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #F8C8DC; /* Memastikan sisi kanan benar-benar pink */
+}
+
+.letter-box {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 35px; /* Border radius lebih melengkung sesuai desain */
+    width: 90%;
+    max-width: 550px;    /* Lebar kotak surat disesuaikan */
+    height: 80vh;        /* Tinggi kotak surat dibuat hampir memenuhi layar */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+}
+
+.letter-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.letter-content {
+    flex-grow: 1;
+    overflow-y: auto;    /* Bisa di-scroll kalau teks kepanjangan */
+    font-size: 15px;
+    line-height: 1.8;
+    color: #222;
+    text-align: left;
+    padding-right: 10px;
+}
+
+.letter-content p {
+    margin-bottom: 20px; /* Atur angka ini untuk jarak antar paragraf */
+    display: block;
+}
+
+/* --- RESPONSIVE UNTUK HP --- */
+@media (max-width: 768px) {
+    .valentine-page {
+        background: #ffebee; /* Di HP, background pink semua */
+    }
+    
+    .split-layout {
+        flex-direction: column; /* Tampilan tumpuk */
+    }
+
+    .left-section {
+        padding: 80px 20px 20px 20px;
+    }
+
+    .phone-container {
+        max-width: 320px; /* Ukuran HP di device kecil */
+    }
+
+    .letter-box {
+        height: auto;
+        margin-bottom: 40px;
+    }
+}
+
+/* Tombol Back */
+.back-btn {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    background: white;
+    border: 1px solid #eee;
+    padding: 8px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #f9f9f9;
+}
+
+/* --- PAGE HOME/IZIPIZY KHUSUS (BIRU) --- */
+.home-page {
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+    /* Background belah dua: Putih (Kiri) & Biru Soft (Kanan) */
+    background: linear-gradient(to right, #ffffff 50%, #e3f2fd 50%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Gunakan selector yang sama untuk elemen yang bentuknya identik */
+.home-page .right-section {
+    background-color: #e3f2fd; /* Warna biru soft */
+}
+
+/* Responsif untuk HP versi Biru */
+@media (max-width: 768px) {
+    .home-page {
+        background: #e3f2fd; /* Di HP, background biru semua */
+    }
+}
+
+/* Pastikan class .nav-text juga berubah warnanya kalau kamu mau biru */
+.home-page .nav-text {
+    color: #90caf9;
+}
