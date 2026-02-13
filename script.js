@@ -10,7 +10,7 @@ function goToLink(type) {
     let url = "";
     switch(type) {
         case 'spotify':
-            url = "https://open.spotify.com/playlist/4i5m8sqVZV8fZjfyisXJ3X?si=3fc30b7afd674e93&pt=f74c39e3d45c312c2a6dd09408972215";
+            url = "https://open.spotify.com/playlist/4i5m8sqVZV8fZjfyisXJ3X?si=fdc4e1a33505425a&pt=a0d00049ed4a86818eb83cda58a79235";
             break;
         case 'sketchtoy':
             url = "http://sketchtoy.com/71465749";
